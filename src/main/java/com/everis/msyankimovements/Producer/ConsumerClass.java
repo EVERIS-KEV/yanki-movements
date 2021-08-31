@@ -8,8 +8,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class ConsumerClass {
 
-  @KafkaListener(topics = "user")
+  @KafkaListener(topics = "TRANSACTION")
   public void consume(String user) {
-    log.info("Consumer received message " + user);
+    log.info("Consumer received message ------>" + user);
   }
 }
